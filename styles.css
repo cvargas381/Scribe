@@ -1,0 +1,9 @@
+body {
+	padding:100px;
+}
+div.navbar div.navbar-inner {
+	padding-left:20px;
+}
+div.navbar div.navbar-inner ul.nav {
+	float:right;
+}
