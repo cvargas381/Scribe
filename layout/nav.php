@@ -6,5 +6,8 @@
 	  			<li><a href="./?p=<?php echo $file ?>"><?php echo $text ?></a></li>
 	  		<?php endforeach ?>
 		</ul>
+		<ul class="nav right">
+			<li><a href="./?lo">Logout</a></li>
+		</ul>
 	</div>
 </div>

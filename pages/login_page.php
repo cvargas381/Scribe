@@ -1,7 +1,7 @@
 <div class="navbar navbar-inverse navbar-fixed-top">
   <div class="navbar-inner">
     <a class="brand" href="#">Scribe</a>
-    <ul class="nav">
+    <ul class="nav right">
       <li><p class="navbar-text">Don't have an account?</p></li>
       <li><a href="#myModal" role="button" data-toggle="modal">Register Here</a></li>
     </ul>
@@ -22,7 +22,7 @@
 	  </div>
 	</div>
 	<div class="form-actions">
-		<button type="submit" class="btn btn-success"><i class="icon-plus-sign icon-white"></i>Log In</button>
+		<button type="submit" class="btn btn-success">Log In</button>
 	</div> 
 </form>
 <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

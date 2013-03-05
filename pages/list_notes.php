@@ -1,4 +1,5 @@
 <h2>Notes</h2>
+
 <?php
 // Connect to the database
 // new mysqli (host,user,password,db name)

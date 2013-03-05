@@ -18,7 +18,7 @@ require('lib/functions.php');
 		<script src="vendor/jquery-ui-1.10.0.custom/js/jquery-1.9.0.js"></script>
 		<script src="vendor/bootstrap/js/bootstrap.js"></script>
 		
-		<title>Contacts</title>
+		<title>Scribe</title>
 	</head>
 	<body>
 		<div id="wrapper" class="container">
@@ -26,7 +26,7 @@ require('lib/functions.php');
 				<?php include('layout/header.php') ?>
 			</header>
 			<nav>
-				<?php if (isset($_SESSION['logged_in'])) { 
+				<?php if (isset($_SESSION['is_logged_in'])) { 
 					include('layout/nav.php'); 
 				} ?>
 			</nav>
