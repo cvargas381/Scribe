@@ -20,7 +20,7 @@ function input($name, $placeholder, $value=null, $class='', $type='') {
 		unset($_SESSION['POST'] [$name]);
 
 		if($value == '') {
-			$class .= ' error';
+			$class .= 'error';
 		} 
 	} else {
 		$value = '';

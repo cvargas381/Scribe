@@ -22,7 +22,7 @@ foreach($required as $r) {
 		// Set message
 		$_SESSION['messagefr'] = array(
 			'type' => 'danger',
-			'text' => 'Please provide all required information.'
+			'text' => 'Missing fields'
 			);
 		// Store form data into session data
 		$_SESSION['POST'] = $_POST;

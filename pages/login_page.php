@@ -10,15 +10,15 @@
 <h1>Log In</h1>
 <form class="form-horizontal" action="./actions/login.php" method="post">
 	<div class="control-group">
-	  <label class="control-label" for="user_username"></label>
+	  <label class="control-label" for="e_user_username"></label>
 	  <div class="controls">
-	    <?php echo input('user_username','Username') ?>
+	    <?php echo input('e_user_username','Username') ?>
 	  </div>
 	</div>
 	<div class="control-group">
-	  <label class="control-label" for="user_password"></label>
+	  <label class="control-label" for="e_user_password"></label>
 	  <div class="controls">
-	    <?php echo input('user_password','Password',null,'','p') ?>
+	    <?php echo input('e_user_password','Password',null,'','p') ?>
 	  </div>
 	</div>
 	<div class="form-actions">

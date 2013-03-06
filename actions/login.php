@@ -5,8 +5,8 @@ require('../config/app.php');
 require('../lib/functions.php');
 
 $required = array(
-	'user_username',
-	'user_password'
+	'e_user_username',
+	'e_user_password'
 );
 
 // Extract form data
@@ -30,8 +30,8 @@ foreach($required as $r) {
 	}
 }
 // check for correct username and password
-$sql = "SELECT * FROM users WHERE user_username='$user_username' AND
-      user_password=md5('$user_password')";
+$sql = "SELECT * FROM users WHERE user_username='$e_user_username' AND
+      user_password=md5('$e_user_password')";
 // connect to DB
 $conn = new mysqli(DB_HOST,DB_USER,DB_PASS,DB_NAME);
 // Query DB
@@ -46,16 +46,19 @@ if($conn->errno > 0) {
 $num_rows = $result->num_rows;
 if($num_rows > 0) {
       $_SESSION['is_logged_in'] = '1';
+      $_SESSION['message'] = array(
+		'text' => 'Welcome',
+		'type' => 'success'
+		);
     } else {
-    	$_SESSION['is_logged_in'] = '';
+    	$_SESSION['message'] = array(
+    		'text' => 'Incorrect Login Information',
+    		'type' => 'error'
+    		);
     }
 
 // Close connection
 $conn->close();
-// Set message
-$_SESSION['message'] = array(
-		'text' => 'Welcome',
-		'type' => 'success'
-		);
+
 // Set location header
 header('Location:../');

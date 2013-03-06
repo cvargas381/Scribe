@@ -10,3 +10,6 @@ div.navbar div.navbar-inner ul.right {
 div.alert {
 	margin:10px;
 }
+input.error {
+	border:1px solid red;
+}
