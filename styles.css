@@ -13,3 +13,10 @@ div.alert {
 input.error {
 	border:1px solid red;
 }
+input.note_title {
+	width:400px;
+}
+textarea.note_content {
+	width:400px;
+	height:300px;
+}

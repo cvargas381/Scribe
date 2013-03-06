@@ -38,6 +38,13 @@ if(isset($_SESSION['messagefr'])) {
 	// Remove message from session
 	unset($_SESSION['messagefr']);
 }
+// Display message if there is one in session data
+if(isset($_SESSION['messageip'])) {
+	// Display message
+	echo "<div class=\"alert alert-{$_SESSION['messageip']['type']}\">{$_SESSION['messageip']['text']}<a class=\"close\" data-dismiss=\"alert\" href=\"#\">&times;</a></div>";
+	// Remove message from session
+	unset($_SESSION['messageip']);
+}
 ?>
   <div class="modal-body">
     <form class="form-horizontal" action="./actions/register.php" method="post">
@@ -66,6 +73,12 @@ if(isset($_SESSION['messagefr'])) {
 	  </div>
 	</div>
 	<div class="control-group">
+	  <label class="control-label" for="user_password2"></label>
+	  <div class="controls">
+	    <?php echo input('user_password2','confirm password',null,'','p') ?>
+	  </div>
+	</div>
+	<div class="control-group">
 	  <label class="control-label" for="user_email">Email</label>
 	  <div class="controls">
 	    <?php echo input('user_email','you@example.com') ?>
@@ -73,8 +86,8 @@ if(isset($_SESSION['messagefr'])) {
 	</div>
   </div>
   <div class="modal-footer">
+  	<button type="submit"class="btn btn-primary">Register</button>
     <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-    <button type="submit"class="btn btn-primary">Register</button>
   </div>
   </form>
 </div>

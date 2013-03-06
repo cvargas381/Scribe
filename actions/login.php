@@ -42,10 +42,14 @@ if($conn->errno > 0) {
 	echo "<p>SQL error #{$conn->errno}: {$conn->error}</p>";
 	echo "<p><strong>SQL:</strong> $sql</p>";
 }
+// get user_id from database
+while(($user = $result->fetch_assoc()) != null) {
+	extract($user);
+}
 // authenticate username and password
 $num_rows = $result->num_rows;
 if($num_rows > 0) {
-      $_SESSION['is_logged_in'] = '1';
+      $_SESSION['user'] = $user_id;
       $_SESSION['message'] = array(
 		'text' => 'Welcome',
 		'type' => 'success'

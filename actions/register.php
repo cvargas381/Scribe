@@ -9,6 +9,7 @@ $required = array(
 	'user_lastname',
 	'user_username',
 	'user_password',
+	'user_password2',
 	'user_email'
 );
 
@@ -34,6 +35,23 @@ foreach($required as $r) {
 		die();
 	}
 }
+// confirm password
+if ($user_password != $user_password2) {
+	// set message
+	$_SESSION['messageip'] = array(
+		'type' => 'danger',
+		'text' => 'Passwords do not match'
+		);
+	// Store form data into session data
+		$_SESSION['POST'] = $_POST;
+		// Set failed register in session data
+		$_SESSION['fr'] = 'true';
+		// Set location header
+		header('Location:../');
+		// Kill script
+		die();
+}
+
 // Add contact to DB
 $sql = "INSERT INTO users (user_firstname,user_lastname,user_username,user_password,user_email) VALUES ('$user_firstname','$user_lastname','$user_username',MD5('$user_password'),'$user_email')";
 // connect to DB

@@ -26,7 +26,7 @@ require('lib/functions.php');
 				<?php include('layout/header.php') ?>
 			</header>
 			<nav>
-				<?php if (isset($_SESSION['is_logged_in'])) { 
+				<?php if (isset($_SESSION['user'])) { 
 					include('layout/nav.php'); 
 				} ?>
 			</nav>

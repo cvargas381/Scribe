@@ -7,7 +7,7 @@ if(isset($_SESSION['message'])) {
 	unset($_SESSION['message']);
 }
 // Store the 'p' paramater from the QS into a variable
-if (!isset($_SESSION['is_logged_in'])) {
+if (!isset($_SESSION['user'])) {
 	$p = 'login_page';
 }elseif(isset($_GET['p'])) {
 	$p = $_GET['p'];	
@@ -15,7 +15,7 @@ if (!isset($_SESSION['is_logged_in'])) {
 	$p = DEFAULT_PAGE;
 }
 if(isset($_GET['lo'])) {
-	unset($_SESSION['is_logged_in']);
+	unset($_SESSION['user']);
 	header('Location:./');
 }
 include("pages/$p.php");
