@@ -12,7 +12,7 @@ function format_phone($phone) {
 * @param String $placeholder
 * @return HTML input element
 */
-function input($name, $placeholder, $value=null, $class='') {
+function input($name, $placeholder, $value=null, $class='', $type='') {
 	if($value == null && isset($_SESSION['POST'] [$name])) {
 		$value = $_SESSION['POST'] [$name];
 
@@ -25,7 +25,12 @@ function input($name, $placeholder, $value=null, $class='') {
 	} else {
 		$value = '';
 	}
-	return "<input class=\"$class\" type=\"text\" name=\"$name\" placeholder=\"$placeholder\" value=\"$value\" />";
+	if($type == '') {
+		$type .= 'text';
+	}elseif($type == 'p') {
+		$type = 'password';
+	}
+	return "<input class=\"$class\" type=\"$type\" name=\"$name\" placeholder=\"$placeholder\" value=\"$value\" />";
 }
 
 /**

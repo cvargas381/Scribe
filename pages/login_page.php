@@ -18,7 +18,7 @@
 	<div class="control-group">
 	  <label class="control-label" for="user_password"></label>
 	  <div class="controls">
-	    <?php echo input('user_password','Password') ?>
+	    <?php echo input('user_password','Password',null,'','p') ?>
 	  </div>
 	</div>
 	<div class="form-actions">
@@ -62,7 +62,7 @@ if(isset($_SESSION['messagefr'])) {
 	<div class="control-group">
 	  <label class="control-label" for="user_password">Password</label>
 	  <div class="controls">
-	    <?php echo input('user_password','password') ?>
+	    <?php echo input('user_password','password',null,'','p') ?>
 	  </div>
 	</div>
 	<div class="control-group">
