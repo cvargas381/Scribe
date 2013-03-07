@@ -1,4 +1,4 @@
-<div class="navbar">
+<div class="navbar navbar-inverse navbar-fixed-top">
 	<div class="navbar-inner">
 		<a class="brand" href="./">Notes</a>
 	  	<ul class="nav">

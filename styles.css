@@ -1,5 +1,6 @@
 body {
 	padding:100px;
+	
 }
 div.navbar div.navbar-inner {
 	padding-left:20px;
@@ -19,4 +20,26 @@ input.note_title {
 textarea.note_content {
 	width:400px;
 	height:300px;
+}
+div.sticky_note {
+}
+div.note {
+	padding-left:10px;
+	padding-right:10px;
+}
+div.note p {
+	margin-bottom:20px;
+}
+div.common_note_body {
+	padding-left:30px;
+	background-color:#fff;
+	background-image:
+	-webkit-radial-gradient(10px 10px, circle contain, #222 0%, #444 80%, #aaa 96%, transparent 100%),
+	-webkit-linear-gradient(left, transparent, transparent 50px, #abced4 50px, #abced4 52px, transparent 52px),
+	-webkit-linear-gradient(#E8E8E8 .1em, transparent .1em);
+	background-position:545px 162px, 520px 0, 0 0;
+	background-size:80px 250px, 83px 1.8em, 83px 1.8em;
+	background-repeat:repeat-y, repeat-y, repeat;
+	background-attachment:fixed;
+	border:3px dotted black;
 }
