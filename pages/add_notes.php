@@ -1,4 +1,4 @@
-<form class="form-horizontal" action="./actions/create_note.php" method="post">
+<form class="form_center" action="./actions/create_note.php" method="post">
 	<div class="control-group">
 	  <label class="control-label" for="note_name">Note Name</label>
 	  <div class="controls">
@@ -20,4 +20,5 @@
 	  </div>
 	</div>
 	<button type="submit" class="btn btn-success">Add Note</button>
+	<a href="./"><button type="button" class="btn">Cancel</button></a>
 </form>

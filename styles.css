@@ -1,6 +1,5 @@
 body {
 	padding:100px;
-	
 }
 div.navbar div.navbar-inner {
 	padding-left:20px;
@@ -17,9 +16,45 @@ input.error {
 input.note_title {
 	width:400px;
 }
+form.form-horizontal div.control-group, form div.control-group {
+	margin-bottom:10px;
+}
+form div.textarea_bottom {
+	margin-bottom:0px;
+}
+form div.control-group div.controls input {
+	margin-bottom:0px;
+}
+form.form_center {
+	width:420px;
+	margin:0 auto;
+}
+div.note h4 {
+	margin-bottom:0px;
+}
 textarea.note_content {
 	width:400px;
 	height:300px;
+}
+textarea.edit_note_content {
+	width:650px;
+	height:150px;
+}
+textarea.edit_sticky_note_content {
+	width:150px;
+	height:100px;
+}
+div.note p.sticky {
+	margin-bottom:0px;
+}
+input.edit_sticky_note_name {
+	width:150px;
+}
+button.edit {
+	margin-right:10px;
+}
+button.edit_sticky {
+
 }
 div.sticky_note {
 }
@@ -30,14 +65,32 @@ div.note {
 div.note p {
 	margin-bottom:20px;
 }
+div.common_note_body h4 {
+	display:inline;
+	margin-right:10px;
+}
+i {
+	opacity:.4;
+	margin-right:5px;
+}
+a i:hover {
+	opacity:1;
+}
+button.no_format {
+	border:none;
+	background:transparent;
+}
+button.no_format i:hover {
+	opacity:1;
+}
 div.common_note_body {
-	padding-left:30px;
-	background-color:#fff;
+	padding-left:50px;
+	/*background-color:#fff;
 	background-image:
 	-webkit-radial-gradient(10px 10px, circle contain, #222 0%, #444 80%, #aaa 96%, transparent 100%),
 	-webkit-linear-gradient(left, transparent, transparent 50px, #abced4 50px, #abced4 52px, transparent 52px),
 	-webkit-linear-gradient(#E8E8E8 .1em, transparent .1em);
-	background-position:545px 162px, 520px 0, 0 0;
+	background-position:680px 175px, 660px 0, 0 0;
 	background-size:80px 250px, 83px 1.8em, 83px 1.8em;
 	background-repeat:repeat-y, repeat-y, repeat;
 	background-attachment:fixed;
